@@ -1,3 +1,5 @@
+"use client";
+import Button from "./components/button/Button";
 import { RenderLineChart } from "./components/chart/PopulationChart";
 
 export default function Home() {
@@ -8,6 +10,10 @@ export default function Home() {
     { year: "1995", value: 12817 },
     { year: "2000", value: 12817 },
   ];
+
+  const handleButtonClick = () => {
+    console.log("button clicked");
+  };
   return (
     <main>
       <h2>Title</h2>
@@ -45,10 +51,10 @@ export default function Home() {
       <h3>グラフ</h3>
       <RenderLineChart data={chartData} />
       <div>
-        <button>総人口</button>
-        <button>年少人口</button>
-        <button>生産年齢人口</button>
-        <button>老年人口</button>
+        <Button onClick={handleButtonClick}>総人口</Button>
+        <Button onClick={handleButtonClick}>年少人口</Button>
+        <Button onClick={handleButtonClick}>生産年齢人口</Button>
+        <Button onClick={handleButtonClick}>老年人口</Button>
       </div>
     </main>
   );
