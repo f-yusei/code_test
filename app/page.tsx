@@ -1,4 +1,4 @@
-import { RenderLineChart } from "./components/chart/Chart";
+import { RenderLineChart } from "./components/chart/PopulationChart";
 
 export default function Home() {
   const chartData = [
