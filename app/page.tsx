@@ -1,4 +1,13 @@
+import { RenderLineChart } from "./components/chart/Chart";
+
 export default function Home() {
+  const chartData = [
+    { year: "1980", value: 12817 },
+    { year: "1985", value: 12817 },
+    { year: "1990", value: 12817 },
+    { year: "1995", value: 12817 },
+    { year: "2000", value: 12817 },
+  ];
   return (
     <main>
       <h2>Title</h2>
@@ -33,15 +42,13 @@ export default function Home() {
           群馬
         </label>
       </form>
+      <h3>グラフ</h3>
+      <RenderLineChart data={chartData} />
       <div>
-        <h2>グラフ</h2>
-        <p>グラフが表示されます</p>
-        <div>
-          <button>総人口</button>
-          <button>年少人口</button>
-          <button>生産年齢人口</button>
-          <button>老年人口</button>
-        </div>
+        <button>総人口</button>
+        <button>年少人口</button>
+        <button>生産年齢人口</button>
+        <button>老年人口</button>
       </div>
     </main>
   );
