@@ -1,6 +1,7 @@
 "use client";
 import Button from "./components/button/Button";
 import { RenderLineChart } from "./components/chart/PopulationChart";
+import Checkbox from "./components/checkbox/Checkbox";
 
 export default function Home() {
   const chartData = [
@@ -11,42 +12,20 @@ export default function Home() {
     { year: "2000", value: 12817 },
   ];
 
-  const handleButtonClick = () => {
-    console.log("button clicked");
-  };
+  const handleButtonClick = () => {};
   return (
     <main>
       <h2>Title</h2>
       <p>都道府県を選択してください</p>
       <form>
-        <label>
-          <input type="checkbox" name="tokyo" value="tokyo" />
-          東京
-        </label>
-        <label>
-          <input type="checkbox" name="kanagawa" value="kanagawa" />
-          神奈川
-        </label>
-        <label>
-          <input type="checkbox" name="saitama" value="saitama" />
-          埼玉
-        </label>
-        <label>
-          <input type="checkbox" name="chiba" value="chiba" />
-          千葉
-        </label>
-        <label>
-          <input type="checkbox" name="ibaraki" value="ibaraki" />
-          茨城
-        </label>
-        <label>
-          <input type="checkbox" name="tochigi" value="tochigi" />
-          栃木
-        </label>
-        <label>
-          <input type="checkbox" name="gunma" value="gunma" />
-          群馬
-        </label>
+        <Checkbox label="東京" name="tokyo" value="tokyo" onChange={() => {}} />
+        <Checkbox label="大阪" name="osaka" value="osaka" onChange={() => {}} />
+        <Checkbox
+          label="福岡"
+          name="fukuoka"
+          value="fukuoka"
+          onChange={() => {}}
+        />
       </form>
       <h3>グラフ</h3>
       <RenderLineChart data={chartData} />
