@@ -1,7 +1,7 @@
 "use client";
-import Button from "./components/button/Button";
-import { RenderLineChart } from "./components/chart/PopulationChart";
-import Checkbox from "./components/checkbox/Checkbox";
+import Button from "../components/button/Button";
+import { RenderLineChart } from "../components/chart/PopulationChart";
+import Checkbox from "../components/checkbox/Checkbox";
 
 export default function Home() {
   const chartData = [
