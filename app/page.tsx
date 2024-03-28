@@ -1,6 +1,6 @@
 "use client";
 import Button from "../components/button/Button";
-import { RenderLineChart } from "../components/chart/PopulationChart";
+import { RenderLineChart } from "../features/chart/PopulationChart";
 import Checkbox from "../components/checkbox/Checkbox";
 
 export default function Home() {
