@@ -33,3 +33,5 @@ const PrefecturesCheckboxes = async () => {
     </div>
   );
 };
+
+export default PrefecturesCheckboxes;

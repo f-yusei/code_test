@@ -1,7 +1,7 @@
 "use client";
+import PrefecturesCheckboxes from "@/features/prefecturesCheckboxes/PrefecturesCheckboxes";
 import Button from "../components/button/Button";
 import { RenderLineChart } from "../features/chart/PopulationChart";
-import Checkbox from "../components/checkbox/Checkbox";
 
 export default function Home() {
   const chartData = [
@@ -17,16 +17,7 @@ export default function Home() {
     <main>
       <h2>Title</h2>
       <p>都道府県を選択してください</p>
-      <form>
-        <Checkbox label="東京" name="tokyo" value="tokyo" onChange={() => {}} />
-        <Checkbox label="大阪" name="osaka" value="osaka" onChange={() => {}} />
-        <Checkbox
-          label="福岡"
-          name="fukuoka"
-          value="fukuoka"
-          onChange={() => {}}
-        />
-      </form>
+      <PrefecturesCheckboxes />
       <h3>グラフ</h3>
       <RenderLineChart data={chartData} />
       <div>
