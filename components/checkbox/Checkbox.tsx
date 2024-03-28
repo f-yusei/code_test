@@ -1,11 +1,11 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import styles from "./Checkbox.module.css";
 
 type CheckboxProps = {
   label: string;
   name: string;
-  value: string;
-  onChange: (checked: boolean) => void;
+  value: string | number;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
 const Checkbox: React.FC<CheckboxProps> = ({
@@ -14,19 +14,10 @@ const Checkbox: React.FC<CheckboxProps> = ({
   value,
   onChange,
 }) => {
-  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(event.target.checked);
-  };
-
   return (
     <div className={styles.checkbox}>
       <label>
-        <input
-          type="checkbox"
-          name={name}
-          value={value}
-          onChange={handleCheckboxChange}
-        />
+        <input type="checkbox" name={name} value={value} onChange={onChange} />
         {label}
       </label>
     </div>
